@@ -30,7 +30,10 @@ var imaginationContent = {
 }
 
 var descriptions = {
-    'BT': 'In reality, it is shown that the supposed events of the novel was actually a book written by Briony herself. Briony claims that certain parts of the book were factual, and that publishing her manuscript was her attempt to atone for her past wrongful actions. However, as can be seen by this visualization, numerous events differ between Briony\'s retelling and reality.'
+    'BT': 'In reality, it is shown that the supposed events of the novel was actually a book written by Briony herself. Briony claims that certain parts of the book were factual, and that publishing her manuscript was her attempt to atone for her past wrongful actions. However, as can be seen by this visualization, numerous events differ between Briony\'s retelling and reality.',
+    'CT': 'While little is generally known of Cecilia\'s exact actions in reality, it is unlikely that she would have jumped to accuse Danny as readily as she did in Briony\'s retelling. Based on Briony\'s description of her, it is highly likely that Briony fabricated her accusation of Danny in order to lessen the severity of Briony\'s own misacusations. However, one key difference is known about Cecilia. While Briony claims that Cecilia survived the war and was reunited with Robbie, it is revealed that Cecilia actually died in a flooded bomb shelter during a raid, and never saw Robbie again after he was imprisoned.',
+    'RT': "Robbie's fate is ultimately quite similar to Cecilia's."
+
 };
 
 
