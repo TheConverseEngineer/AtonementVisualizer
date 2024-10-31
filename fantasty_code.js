@@ -32,6 +32,16 @@ var imaginationContent = {
     'RT-DH': "Both Cecilia and Robbie believe that it was in fact Danny to raped Lola. However, the validity of this is uncertain, as it is likely that Briony is fabricating this suspicion in order to argue to the reader that others (most importantly the infallible Robbie Turner) were also prejudiced."
 }
 
+var descriptions = {
+    'BT': 'Briony Tallis is the young protagonist of Atonement. She witnesses her older sister flirting with the groundkeeper\'s son, Robbie, on numerous occassions, and mistakes the interactions for harrasment. When her cousin Lola is raped, she mistakenly frames Robbie for the crime and has her imprisoned. However, she eventually learns of her mistake and regrets her actions, eventually abandoning her family and persuing a job as a war nurse to repent.',
+    'CT': 'Cecilia is Briony\'s older sister, and is in love with Robbie. When Briony accuses Robbie of rape, Cecilia breaks with her family out of anger and becomes a nurse. Eventually, she is reunited with Robbie.',
+    'RT': "Robbie is the son of the groundkeeper and is Cecilia's love interest. He is unfairly accused of and convicted of rape by Briony, and is imprisoned. Eventually Robbie is deployed to fight in World War II in exchange for getting his sentence commuted. After a narrow escape at the beaches of Dunkirk, Robbie returns to England and is reunited with Cecilia.",
+    'DH': 'Danny Hardman is the son of the Tallis family\' servant. Despite playing a relatively minor role in the events of the story, he is accused by Robbie and Cecilia of having raped Lola, most likely due to his lower social status.',
+    'ET': 'Emily Tallis is the mother of Briony and Cecilia. Due to constant migraines, she is often confined to her room, and has little knowledge of the events which transpires in her home. Despite this, she is quick to second Briony\'s accusation of Robbie.',
+    'PM': 'Paul Marshall is the son of a rich war supplier, and is a friend of the Tallis family. It is implied that he was the one who actually raped Lola',
+    'LQ': 'Lola is Briony\'s young cousin, and is staying with the Tallis\'s due to familial struggles. When she is raped, she refuses to admit who the perpetrator was, and instead willingly agrees with Briony\'s accusation of Robbie.'
+};
+
 
 var container = document.getElementById('network');
 
@@ -53,7 +63,11 @@ network.on("click", function (params) {
         // This is an edge
         document.getElementById("eventSpanHeading").innerText = params['edges'][0];
         document.getElementById("eventSpanContent").innerText = imaginationContent[params['edges'][0]]; 
-    } 
+    } else if (params['nodes'].length == 1) {
+        // This is a node
+        document.getElementById("eventSpanHeading").innerText = params['nodes'][0];
+        document.getElementById("eventSpanContent").innerText = descriptions[params['nodes'][0]];
+    }
     console.log(
         "click event, getNodeAt returns: " + this.getNodeAt(params.pointer.DOM)
     );
