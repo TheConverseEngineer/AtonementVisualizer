@@ -65,9 +65,13 @@ network.on("click", function (params) {
         document.getElementById("eventSpanContent").innerText = imaginationContent[params['edges'][0]]; 
     } else if (params['nodes'].length == 1) {
         // This is a node
-        document.getElementById("eventSpanHeading").innerText = params['nodes'][0];
-        document.getElementById("eventSpanContent").innerText = descriptions[params['nodes'][0]];
+        fetch('reality_content/' + params['nodes'][0] + '.html')
+            .then(response => response.text())
+            .then(html => 
+                document.getElementById("eventContent").innerHTML = html
+        );
     }
+    
     console.log(
         "click event, getNodeAt returns: " + this.getNodeAt(params.pointer.DOM)
     );
