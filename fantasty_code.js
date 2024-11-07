@@ -50,14 +50,14 @@ network.on("click", function (params) {
     //document.getElementById("eventSpanContent").innerText = JSON.stringify(params, null, 4);
     if (params['edges'].length == 1 && params['nodes'].length == 0) {
         // This is an edge
-        fetch('reality_content/' + params['edges'][0] + '.html')
+        fetch('fantasy_content/' + params['edges'][0] + '.html')
             .then(response => response.text())
             .then(html =>
                 document.getElementById("eventContent").innerHTML = html
         );
     } else if (params['nodes'].length == 1) {
         // This is a node
-        fetch('reality_content/' + params['nodes'][0] + '.html')
+        fetch('fantasy_content/' + params['nodes'][0] + '.html')
             .then(response => response.text())
             .then(html => 
                 document.getElementById("eventContent").innerHTML = html
